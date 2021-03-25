@@ -1,0 +1,51 @@
+nav{
+    width: 100%; 
+    position: absolute;
+    bottom: 0;
+    height: 80px;
+}
+.my-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+.in-riproduzione, .player, .volume{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+}
+.in-riproduzione img{
+    width: 50px;
+}
+.player{
+    align-content: center;
+}
+
+
+
+
+
+
+
+
+
+/* Utility Classes */
+.bg-grey{
+    background-color: #282828;
+}
+.bg-black{
+    background-color: #000000;
+}
+.bg-blue{
+    background-color: #141922;
+}
+.bg-darkblue{
+    background-color: #090B12;
+}
+.text-white{
+    color: white;
+}
+.text-grey{
+    color: #282828;
+}
