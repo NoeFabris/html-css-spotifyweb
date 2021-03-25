@@ -2,24 +2,64 @@ nav{
     width: 100%; 
     position: absolute;
     bottom: 0;
-    height: 80px;
+
 }
 .my-nav{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 
 }
 .in-riproduzione, .player, .volume{
     display: flex;
     flex-direction: row;
-    /* justify-content: space-between; */
+    align-items: center;
+    /* justify-content: space-around; */
 }
 .in-riproduzione img{
     width: 50px;
 }
+.in-riproduzione h5{
+    margin-bottom: 5px;
+}
+.in-riproduzione h6{
+    margin-top: 0;
+}
 .player{
-    align-content: center;
+    flex-direction: column;
+}
+.player-top i{
+    padding: 15px 25px 0 25px;
+    font-size: 2rem;
+
+}
+.player-top .play{
+    font-size: 3rem;
+}
+.player-bottom{
+    display: flex;
+    align-items: center;
+    padding-bottom: 15px;
+}
+.player-bottom h5{
+    padding: 0 25px;
+}
+.player-bottom div, .volume div{
+    height: 6px;
+    border-radius: 5px;
+}
+.player-bottom .row-grey{
+    width: 400px;
+}
+.player-bottom .row-lightgrey{
+    width: 200px;
+}
+.volume .row-grey{
+    width: 70px;
+}
+.volume .row-lightgrey{
+    width: 30px;
 }
 
 
@@ -33,6 +73,12 @@ nav{
 /* Utility Classes */
 .bg-grey{
     background-color: #282828;
+}
+.bg-white{
+    background-color: white;
+}
+.bg-lightgrey{
+    background-color: lightgrey;
 }
 .bg-black{
     background-color: #000000;
