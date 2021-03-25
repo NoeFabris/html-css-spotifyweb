@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://use.fontawesome.com/02fe37fb01.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <title>Spotify</title>
@@ -54,8 +54,21 @@
     </nav>
     <main>
     <!-- colonna laterale -->
-        <section>
-
+        <section class="menu-col bg-black">
+            <div class="logo">
+                <img src="img/logo.svg" alt="">
+            </div>
+            <ul class="text-grey2 list-unstyled">
+<!-- img da centrare verticalmente  -->
+                <li><img src="img/home.svg" alt=""> Home</li>
+                <li><img src="img/search.svg" alt=""> Cerca</li>
+                <li><img src="img//libreria.svg" alt=""> La tua libreria</li>
+            </ul>
+            <h4 class="text-uppercase text-white"><strong>playlist</strong></h4>
+            <div class="new-playlist">
+                <div class="box-playlist"></div>
+                <h4 class="text-grey2"><strong>Crea playlist</strong></h5>
+            </div>
         </section>
     <!-- Blocco centrale album -->
         <section>
