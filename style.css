@@ -4,9 +4,10 @@ nav{
     bottom: 0;
 }
 main{
+    height: calc(100vh - 100px);
     display: flex;
 }
-h1, h2, h3, h4, h5, h6{
+h1, h2, h3, h4, h5, h6, p{
     font-weight: bold;
 }
 .my-nav{
@@ -14,7 +15,8 @@ h1, h2, h3, h4, h5, h6{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
+    /* da togliere height fissa */
+    height: 100px;
 }
 .in-riproduzione, .player, .volume{
     display: flex;
@@ -44,7 +46,7 @@ h1, h2, h3, h4, h5, h6{
 .player-bottom{
     display: flex;
     align-items: center;
-    padding-bottom: 15px;
+    /* padding-bottom: 15px; */
 }
 .player-bottom h5{
     padding: 0 25px;
@@ -54,7 +56,7 @@ h1, h2, h3, h4, h5, h6{
     border-radius: 5px;
 }
 .player-bottom .row-grey{
-    width: 400px;
+    width: 500px;
 }
 .player-bottom .row-lightgrey{
     width: 200px;
@@ -69,12 +71,12 @@ h1, h2, h3, h4, h5, h6{
     padding: 0 10px;
 }
 .menu-col{
+    display: flex;
     flex-direction: column;
     width: 300px;
-    height: 100vh;
+    height: 100%;
     padding-left: 25px;
     font-weight: bold;
-    /* align-items: baseline; */
 }
 .logo{
     width: 200px;
@@ -104,11 +106,14 @@ h1, h2, h3, h4, h5, h6{
 .playlist h5{
     margin-top: 30px;
 }
+.playlist{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow: auto;
+}
 .menu-col-bottom{
-    /* corretto ?? */
-    position: absolute;
-    bottom: 130px;
-    width: 275px;
+    margin-bottom: 20px;
 }
 .profile-img{
     width: 40px;
@@ -128,21 +133,43 @@ h1, h2, h3, h4, h5, h6{
 }
 .main-content{
     width: 100%;
+    /* display: flex; */
+    /* padding: 10px; */
+}
+.update{
+    text-align: right;
+    /* display: flex;
+    justify-content: center; */
 }
 .my-btn{
     margin: 30px;
     padding: 10px 40px;
     border: 1px solid white;
     border-radius: 30px;
-    /* float: right; */
 }
 .my-list li{
     display: inline-block;
     margin: 10px 25px;
-    /* justify-content: center; */
+    
 }
 .my-list{
-    /* align-items: center; */
+    display: flex;
+    justify-content: center;
+}
+.recently-played{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+.album{
+    display: flex;
+    width: calc((100% - 210px) / 6);
+    flex-direction: column;
+}
+.album h4, .album p{
+    display: flex;
+    justify-content: center;
 }
 
 
@@ -158,8 +185,11 @@ h1, h2, h3, h4, h5, h6{
 .bg-white{
     background-color: white;
 }
+.bg-lightgrey1{
+    background-color: #C1C1C1;
+}
 .bg-lightgrey{
-    background-color: lightgrey;
+    background-color: #5A5A5A;
 }
 .bg-black{
     background-color: #000000;
@@ -181,4 +211,7 @@ h1, h2, h3, h4, h5, h6{
 }
 .text-grey2{
     color: #A3A3A3;
+}
+.pd-30{
+    padding: 0 30px;
 }
