@@ -3,6 +3,9 @@ nav{
     position: absolute;
     bottom: 0;
 }
+main{
+    display: flex;
+}
 h1, h2, h3, h4, h5, h6{
     font-weight: bold;
 }
@@ -66,7 +69,6 @@ h1, h2, h3, h4, h5, h6{
     padding: 0 10px;
 }
 .menu-col{
-    display: flex;
     flex-direction: column;
     width: 300px;
     height: 100vh;
@@ -106,7 +108,7 @@ h1, h2, h3, h4, h5, h6{
     /* corretto ?? */
     position: absolute;
     bottom: 130px;
-    width: 300px;
+    width: 275px;
 }
 .profile-img{
     width: 40px;
@@ -121,10 +123,27 @@ h1, h2, h3, h4, h5, h6{
 }
 .line{
     height: 2px;
-    width: 83%;
+    width: 80%;
     margin: 15px 0;
 }
-
+.main-content{
+    width: 100%;
+}
+.my-btn{
+    margin: 30px;
+    padding: 10px 40px;
+    border: 1px solid white;
+    border-radius: 30px;
+    /* float: right; */
+}
+.my-list li{
+    display: inline-block;
+    margin: 10px 25px;
+    /* justify-content: center; */
+}
+.my-list{
+    /* align-items: center; */
+}
 
 
 
@@ -149,7 +168,7 @@ h1, h2, h3, h4, h5, h6{
     background-color: #141922;
 }
 .bg-darkblue{
-    background-color: #090B12;
+    background-color: #191f33;
 }
 .text-white{
     color: white;
