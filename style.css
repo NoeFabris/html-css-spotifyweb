@@ -133,6 +133,7 @@ h1, h2, h3, h4, h5, h6, p{
 }
 .main-content{
     width: 100%;
+    overflow: auto;
     /* display: flex; */
     /* padding: 10px; */
 }
@@ -164,12 +165,16 @@ h1, h2, h3, h4, h5, h6, p{
 }
 .album{
     display: flex;
-    width: calc((100% - 210px) / 6);
+    width: calc((100% - 200px) / 6);
     flex-direction: column;
 }
 .album h4, .album p{
     display: flex;
     justify-content: center;
+}
+.popolari div{
+    border-radius: 50%;
+    /* overflow: ; */
 }
 
 
