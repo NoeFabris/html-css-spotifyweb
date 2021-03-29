@@ -172,9 +172,8 @@ h1, h2, h3, h4, h5, h6, p{
     display: flex;
     justify-content: center;
 }
-.popolari div{
+.popolari img{
     border-radius: 50%;
-    /* overflow: ; */
 }
 
 
@@ -201,6 +200,7 @@ h1, h2, h3, h4, h5, h6, p{
 }
 .bg-blue{
     background-color: #141922;
+    background-size: cover;
 }
 .bg-darkblue{
     background-color: #191f33;
