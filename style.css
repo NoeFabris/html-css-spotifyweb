@@ -15,68 +15,88 @@ h1, h2, h3, h4, h5, h6, p{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    /* da togliere height fissa */
-    height: 100px;
 }
 .in-riproduzione, .player, .volume{
     display: flex;
     flex-direction: row;
     align-items: center;
-    /* justify-content: space-around; */
 }
 .in-riproduzione img{
-    width: 50px;
+    width: 55px;
+    margin: 0 15px;
 }
 .in-riproduzione h5{
-    margin-bottom: 5px;
+    margin-bottom: 0px;
 }
 .in-riproduzione h6{
     margin-top: 0;
 }
+.in-riproduzione i{
+    margin: 0 8px;
+    font-size: 2rem;
+}
+.in-riproduzione div:last-of-type{
+    margin: 0 30px;
+}
 .player{
+    display: flex;
     flex-direction: column;
 }
+.player-top{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 .player-top i{
-    padding: 15px 25px 0 25px;
+    padding: 15px 20px 1px 20px;
     font-size: 2rem;
 }
 .player-top .play{
-    font-size: 3rem;
+    font-size: 4rem;
 }
 .player-bottom{
     display: flex;
     align-items: center;
-    /* padding-bottom: 15px; */
+    margin-bottom: 10px;
 }
 .player-bottom h5{
     padding: 0 25px;
 }
 .player-bottom div, .volume div{
-    height: 6px;
+    height: 5px;
     border-radius: 5px;
 }
 .player-bottom .row-grey{
-    width: 500px;
+    width: 650px;
 }
 .player-bottom .row-lightgrey{
-    width: 200px;
+    width: 160px;
+}
+.volume{
+    margin-right: 15px;
 }
 .volume .row-grey{
-    width: 70px;
+    width: 150px;
 }
 .volume .row-lightgrey{
-    width: 30px;
+    width: 40px;
 }
 .volume i{
-    padding: 0 10px;
+    margin: 0 15px;
+    font-size: 2rem;
 }
 .menu-col{
     display: flex;
     flex-direction: column;
     width: 300px;
     height: 100%;
-    padding-left: 25px;
+    padding-left: 35px;
     font-weight: bold;
+}
+.menu-col ul{
+    /* display: flex;
+    flex-direction: column;
+    align-content: center; */
 }
 .logo{
     width: 200px;
@@ -89,6 +109,18 @@ h1, h2, h3, h4, h5, h6, p{
 }
 .menu-col li{
     margin-top: 10px;
+}
+/* Float e position utilizzati insieme, da rivedere */
+.line-green{
+    height: 40px;
+    width: 3px;
+    background-color: greenyellow;
+    display: flex;
+    flex-direction: column;
+    /* float: left; */
+    /* position: relative;
+    bottom: -50px; */
+    /* left: -35px; */
 }
 .new-playlist{
     display: flex;
@@ -134,6 +166,7 @@ h1, h2, h3, h4, h5, h6, p{
 .main-content{
     width: 100%;
     overflow: auto;
+    height: auto;
     /* display: flex; */
     /* padding: 10px; */
 }
@@ -215,7 +248,10 @@ h1, h2, h3, h4, h5, h6, p{
     color: #282828;
 }
 .text-grey2{
-    color: #A3A3A3;
+    color: #7B7B7B;
+}
+.text-lightgrey{
+    color: #C1C1C1;
 }
 .pd-30{
     padding: 0 30px;
