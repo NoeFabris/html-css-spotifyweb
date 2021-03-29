@@ -19,8 +19,10 @@ h1, h2, h3, h4, h5, h6, p{
 }
 .in-riproduzione, .player, .volume{
     display: flex;
-    flex-direction: row;
     align-items: center;
+}
+.in-riproduzione, .volume{
+    flex-basis: 300px;
 }
 .in-riproduzione img{
     width: 55px;
@@ -35,6 +37,7 @@ h1, h2, h3, h4, h5, h6, p{
 .in-riproduzione i{
     margin: 0 8px;
     font-size: 2rem;
+    display: flex;
 }
 .in-riproduzione div:last-of-type{
     margin: 0 30px;
@@ -42,7 +45,8 @@ h1, h2, h3, h4, h5, h6, p{
 .player{
     display: flex;
     flex-direction: column;
-    flex-shrink: 1;
+    flex-grow: 1;
+    flex-basis: 250px;
 }
 .player-top{
     display: flex;
@@ -59,6 +63,7 @@ h1, h2, h3, h4, h5, h6, p{
 .player-bottom{
     display: flex;
     align-items: center;
+    justify-content: center;
     width: 100%;
     margin-bottom: 10px;
 }
@@ -70,10 +75,12 @@ h1, h2, h3, h4, h5, h6, p{
     border-radius: 5px;
 }
 .player-bottom .row-grey{
-    width: 650px;
+    flex-grow: 1;
+    max-width: 650px;
 }
 .player-bottom .row-lightgrey{
-    width: 160px;
+    flex-grow: 1;
+    max-width: 160px;
 }
 .volume{
     margin-right: 15px;
@@ -102,12 +109,17 @@ h1, h2, h3, h4, h5, h6, p{
 }
 .home{
     border-left: 4px solid greenyellow;
-    padding-left: 35px;
+    padding-left: 31px;
 }
 .logo{
     width: 200px;
     margin-top: 30px;
     margin-bottom: 20px;
+    padding-left: 35px;
+
+}
+.logo-small{
+    display: none;
 }
 .menu-col li img{
     width: 35px;
@@ -115,6 +127,9 @@ h1, h2, h3, h4, h5, h6, p{
 }
 .menu-col li{
     margin-top: 10px;
+}
+.menu-col li h5{
+    display: inline-block;
 }
 .new-playlist{
     display: flex;
@@ -175,6 +190,7 @@ h1, h2, h3, h4, h5, h6, p{
 }
 .update{
     text-align: right;
+    height: 105px;
     /* display: flex;
     justify-content: center; */
 }
@@ -193,6 +209,11 @@ h1, h2, h3, h4, h5, h6, p{
     display: flex;
     justify-content: center;
 }
+.linguetta2{
+    height: 2px;
+    width: 50px;
+    background-color: greenyellow;
+}
 .recently-played{
     display: flex;
     flex-direction: row;
@@ -209,22 +230,90 @@ h1, h2, h3, h4, h5, h6, p{
 .recently-played div:first-of-type{
     margin-left: 0px;
 }
-.album img{
-    width: 100%
-}
 .album h4, .album p{
     display: flex;
     justify-content: center;
 }
-.popolari img{
+.cover-container{
+    background-size: cover;
+    width: 280px;
+    height: 280px;
+    position: relative;
+    /* height: 50px; */
+}
+.cover1{
+    background-image: url("img/metal_lifting.jpg");
+}
+.cover2{
+    background-image: url("img/stranger.jpeg");
+}
+.cover3{
+    background-image: url("img/aquietplace.jpeg");
+}
+.cover4{
+    background-image: url("img/split.jpeg");
+}
+.cover5{
+    background-image: url("img/cure.jpeg");
+}
+.cover6{
+    background-image: url("img/sinister.jpeg");
+}
+.cover7{
+    background-image: url("img/radar.jpeg");
+}
+.cover8{
+    background-image: url("img/mixdaily.jpeg");
+}
+.cover9{
+    background-image: url("img/youg.jpeg");
     border-radius: 50%;
 }
+.cover10{
+    background-image: url("img/einaudi.jpeg");
+    border-radius: 50%;
 
-@media screen and (max-width: 1200px){
+}
+
+.play-hov{
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 10rem;
+    color: white; 
+    display: inline-block;
+    transition: .5s ease;
+}
+
+.album:hover .cover-container{
+    opacity: 0.7;
+}
+.album:hover .play-hov{
+    opacity: 1;
+}
+li:hover, h5:hover, i:hover{
+    color: white;
+}
+.row-lightgrey:hover{
+    background-color: yellowgreen;
+}
+.play:hover{
+    /* font-size: 4rem; */
+}
+h6:hover{
+    text-decoration: underline;
+    color: white;
+}
+button:hover{
+    padding: 15px 45px;
+}
+@media screen and (max-width: 1200px) and (min-width:993px){
     .album{
         width: calc((100% - 150px) / 4);
     }
-    .player-bottom .row-grey{
+    /* .player-bottom .row-grey{
         width: 400px;
     }
     .player-bottom .row-lightgrey{
@@ -235,10 +324,10 @@ h1, h2, h3, h4, h5, h6, p{
     }
     .volume .row-lightgrey{
         width: 30px;
-    }
+    } */
 }
-@media screen and (max-width: 992px){
-    .player-bottom .row-grey{
+@media screen and (max-width: 992px) and (min-width:769px){
+    /* .player-bottom .row-grey{
         width: 200px;
     }
     .player-bottom .row-lightgrey{
@@ -249,11 +338,13 @@ h1, h2, h3, h4, h5, h6, p{
     }
     .volume .row-lightgrey{
         width: 20px;
-    }
+    } */
 }
 @media screen and (max-width: 768px){
-    .album{
-        width: calc(100% / 2);
+    .alb-2 .album{
+        width: 50%;
+        display: flex;
+        flex-direction: row;
     }
     .player-top i{
         padding: 10px 15px 1px 15px;
@@ -263,27 +354,56 @@ h1, h2, h3, h4, h5, h6, p{
         margin: 0 5px;
         font-size: 2rem;
     }
-    .player-bottom .row-grey{
-        width: 200px;
-    }
-    .player-bottom .row-lightgrey{
-        width: 40px;
-    }
-    .volume .row-grey{
-        width: 80px;
-    }
-    .volume .row-lightgrey{
-        width: 20px;
-    }
     .in-riproduzione img{
         width: 35px;
     }
     .logo-big{
         display: none;
     }
+    .disp-none-xs{
+        display: none;
+    }
+    .disp-none-xs h5{
+        display: none;
+    }
+    .menu-col li h5{
+        display: none;
+    }
     .menu-col{
         width: 50px;
     }
+    .menu-col li{
+        padding-left: 0px;
+    }
+    .logo{
+        padding-left: 0px;
+        width: 50px;
+    }
+    .logo-small{
+        display: block;
+        margin: auto;
+        width: 40px;
+    }
+    .home{
+        border: 0px;
+    }
+    .menu-col ul{
+        width: 100%;
+    }
+    .menu-col ul li img{
+        margin: auto;
+    }
+    .album-section ul{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: calc(100% / 4);
+    }
+    .logo{
+        /* width: 30px; */
+        /* margin-top: 30px; */
+    }
+
 }
 
 
