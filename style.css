@@ -180,6 +180,8 @@ h1, h2, h3, h4, h5, h6, p{
 }
 .main-content{
     overflow: auto;
+    width: 100%;
+    /* height: 100%; */
     /* height: auto; */
     /* display: flex; */
     /* padding: 10px; */
@@ -187,6 +189,9 @@ h1, h2, h3, h4, h5, h6, p{
 .album-section{
     /* width: 100vw;
     width: 100vh; */
+}
+.album-section h4, .album-section h1{
+    margin-bottom: 30px;
 }
 .update{
     text-align: right;
@@ -207,6 +212,7 @@ h1, h2, h3, h4, h5, h6, p{
 }
 .my-list{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 .linguetta2{
@@ -216,15 +222,16 @@ h1, h2, h3, h4, h5, h6, p{
 }
 .recently-played{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
-
 }
 .album{
     display: flex;
-    width: calc((100% - 150px) / 6);
+    width: calc((100% - 100px) / 6);
     flex-direction: column;
     justify-content: center;
     align-self: baseline;
+    justify-content: space-between;
     margin-left: 20px;
 }
 .recently-played div:first-of-type{
@@ -236,15 +243,22 @@ h1, h2, h3, h4, h5, h6, p{
 }
 .cover-container{
     background-size: cover;
-    width: 280px;
-    height: 280px;
+    background-repeat: no-repeat;
+    width: 100%;
+    /* height: 300px; */
     position: relative;
     /* height: 50px; */
 }
-.cover1{
-    background-image: url("img/metal_lifting.jpg");
+.cover-container img{
+    width: 100%;
 }
-.cover2{
+.img-circle img{
+    border-radius: 50%;
+}
+/* .cover1{
+    background-image: url("img/metal_lifting.jpg");
+} */
+/* .cover2{
     background-image: url("img/stranger.jpeg");
 }
 .cover3{
@@ -273,7 +287,7 @@ h1, h2, h3, h4, h5, h6, p{
     background-image: url("img/einaudi.jpeg");
     border-radius: 50%;
 
-}
+} */
 
 .play-hov{
     opacity: 0;
@@ -286,7 +300,6 @@ h1, h2, h3, h4, h5, h6, p{
     display: inline-block;
     transition: .5s ease;
 }
-
 .album:hover .cover-container{
     opacity: 0.7;
 }
@@ -327,24 +340,28 @@ button:hover{
     } */
 }
 @media screen and (max-width: 992px) and (min-width:769px){
-    /* .player-bottom .row-grey{
-        width: 200px;
+    .album{
+        width: calc((100% - 100px) / 4);
     }
-    .player-bottom .row-lightgrey{
-        width: 40px;
+    .player-top i{
+        padding: 10px 15px 1px 15px;
+        font-size: 2rem;
     }
-    .volume .row-grey{
-        width: 80px;
+    .volume i{
+        margin: 0 5px;
+        font-size: 2rem;
     }
-    .volume .row-lightgrey{
-        width: 20px;
-    } */
+    .in-riproduzione img{
+        width: 35px;
+    }
 }
 @media screen and (max-width: 768px){
-    .alb-2 .album{
-        width: 50%;
-        display: flex;
-        flex-direction: row;
+    .recently-played{
+        justify-content: space-between;
+    }
+    .album{
+        width: 45%;
+        margin-left: 0px;
     }
     .player-top i{
         padding: 10px 15px 1px 15px;
@@ -393,17 +410,20 @@ button:hover{
     .menu-col ul li img{
         margin: auto;
     }
-    .album-section ul{
+    /* .album-section ul{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         width: calc(100% / 4);
-    }
+    } */
     .logo{
         /* width: 30px; */
         /* margin-top: 30px; */
     }
-
+    .my-list{
+        /* justify-content: space-around; */
+        width: calc(100% / 4);
+    }
 }
 
 
